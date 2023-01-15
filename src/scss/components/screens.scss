@@ -1,0 +1,107 @@
+
+$color_base:#fff;
+
+.loading-icon {
+  /*display: none; /* TODO */
+  position: absolute; 
+  top: calc(50% - 35px);
+  left: calc(50% - 35px); 
+  right: calc(50% - 35px); 
+  bottom: calc(50% - 35px);
+  width: 70px; 
+} 	      
+  
+.page__wrapper {
+  position: fixed;
+  top: 0;        
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex; 
+  flex-direction: row-reverse; 
+  justify-content: space-between; 
+  align-items: flex-end;
+  background: rgba(0, 0, 0, 0.8);
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.page__screen { 
+  position: fixed;
+  top: 0;       
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  
+  animation: ani 1.5s forwards; 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  &.up {
+  opacity: 0;
+  animation: scroll-up 0.5s forwards; } 
+  @keyframes scroll-up {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {transform: translateY(150%);}
+    100% {transform: translateX(0);}
+    /*0% {transform: translateX(150%);}
+    100% {transform: translateY(0);}*/
+  } 
+  &.down {
+  opacity: 0;
+  animation: scroll-down 0.5s forwards; } 
+  @keyframes scroll-down {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {transform: translateY(-150%);}
+    100% {transform: translateX(0);}
+    /*0% {transform: translateX(-150%);}
+    100% {transform: translateY(0);}*/    
+  }
+  
+}
+
+.screen__subtitle {
+  position: absolute; 
+  top: 45%;
+  left: 25%;
+  right: 25%;
+  font-size: 2.8rem;              
+  font-weight: 400;      
+  z-index: 50;
+  color: $color_base; 
+  @media screen and (orientation: landscape) and (max-width: 1050px) {
+    top: calc(45% - 10px);
+    left: 18%;
+    right: 18%;
+    font-size: 2.2rem;
+  }
+  @media screen and (orientation: portrait) {
+    top: 35%;
+    left: 12%;
+    right: 12%;
+    font-size: 2.2rem;    
+    @media screen and (max-width: 475px) {
+      top: 35%;
+      left: 3%;
+      right: 3%;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.screen__images {
+  display: block;  
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;  
+  object-fit: cover;
+  object-position: center;     
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}	
+

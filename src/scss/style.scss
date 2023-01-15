@@ -1,0 +1,28 @@
+/* Операторы:
+  & - имитирует родителя
+  > - обращение к первому дочернему элементу */
+
+@import "layout/header.scss";
+@import "components/screens.scss";
+@import "components/controls.scss";
+@import "components/social-icons.scss";
+@import "components/menu-mobile.scss";
+@import "components/content.scss";
+
+$fz:50px;
+$color_base:#fff;
+$color_title:#fd49ac;
+$color_subtitle:#dfc3ac;
+
+body {
+  font-size: 20px;
+}
+
+main {
+  
+}
+
+a { 
+  text-decoration: none;
+}
+
