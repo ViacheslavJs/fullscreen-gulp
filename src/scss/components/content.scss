@@ -11,16 +11,16 @@ $color_subtitle:#dfc3ac;
   padding: 0;   
   z-index: 50; 
   @media screen and (orientation: landscape) and (max-width: 1050px) {
-    top: calc(23% - 30px);
+    top: 7%;
     left: 18%;
     right: 18%;
   }
   @media screen and (orientation: portrait) {
-    top: 20%;
+    top: calc(20% - 50px);
     left: 12%;
     right: 12%;
     @media screen and (max-width: 475px) {
-      top: 20%;
+      top: 10%;
       left: 3%;
       right: 3%;
     }
