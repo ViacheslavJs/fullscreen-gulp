@@ -53,16 +53,28 @@ $color_socialnetwork:#cf43ac;
 .social-link-bottom {   
   display: block;
   
-  &.left {
-    left: 50px;
+  &.first {
+    left: 60px;
   }
 
-  &.center {
-    left: 115px;
+  &.second {
+    left: 125px;
   }
 
-  &.right {
-    left: 180px;
+  &.third {
+    left: 190px;
+  }
+  
+  &.first_to-up {
+    bottom: 70px;
+  }
+
+  &.second_to-up{
+    bottom: 135px;
+  }
+
+  &.third_to-up {
+    bottom: 200px;
   }
   
   @media screen and (min-width: 1051px) {
@@ -85,18 +97,24 @@ $color_socialnetwork:#cf43ac;
   position: absolute; 
   left: 0; 
   bottom: 10px; 
-  margin-left: 25px;   
+  margin-left: 15px;   
   z-index: 50;  
 }
 
 .social-link-bottom.icons-show {
   opacity: 0;
-  animation: an 0.8s forwards;   
-  @keyframes an {
+  animation: anim-to-up 0.8s forwards;   
+  @keyframes anim-to-right {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: translateX(-150%);}
     100% {transform: translateY(0);}
+  }
+  @keyframes anim-to-up {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {transform: translateY(150%);}
+    100% {transform: translateX(0);}
   }
 }
 
