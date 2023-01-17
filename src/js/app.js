@@ -4,7 +4,31 @@
 //import * as vjsFunctions from "./modules/functions.js"
 //vjsFunctions.isWebp();
 
-// TODO - icon show/animation
+// TODO - or (icon show/animation)
+const socialNetworkIcon = document.querySelector('.social-base-icon');
+const link = document.querySelectorAll('.social-link-bottom');
+ 
+link.forEach(w => {
+  socialNetworkIcon.addEventListener('click', showIcons);
+  function showIcons() {
+    w.classList.toggle('icons-show');
+    socialNetworkIcon.classList.toggle('base-icon-hidden');
+    
+    // TODO - optional - hide icons when clicked anywhere
+  const screen = document.querySelectorAll('.screen__images');
+  screen.forEach(q => {
+    q.addEventListener('click', function() {
+      w.classList.remove('icons-show');
+      socialNetworkIcon.classList.remove('base-icon-hidden');
+    });
+  });
+    
+  }    
+});
+
+/*
+// TODO - or (self-disappearance icon show/animation)
+// connect 'cursor: default' property if using this js block
 const socialNetworkIcon = document.querySelector('.social-base-icon');
 const link = document.querySelectorAll('.social-link-bottom');
  
@@ -21,6 +45,7 @@ link.forEach(w => {
     }, 7000); 
   }    
 });
+*/
 
 /////////////////////////////////////////////
 

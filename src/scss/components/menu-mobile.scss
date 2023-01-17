@@ -1,5 +1,10 @@
 
 $color_base:#fff;
+$color: gray;
+$color-dark: darken($color, 5%);
+$color-light: lighten($color, 60%);
+$color-sat: saturate($color-dark, 3%);
+$color-desat: desaturate($color-light, 10%);
 
 .menu-icon {
   position: absolute; 
@@ -12,7 +17,8 @@ $color_base:#fff;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   &:hover {
     opacity: 0.6;
-    transition: 0.2s; 
+    color: silver;
+    transition: 0.4s; 
     cursor: pointer;
   }
   @media screen and (min-width: 1051px) {
@@ -40,11 +46,6 @@ $color_base:#fff;
   }
 }
 
-.menu:hover {
-  transition: background-color 0.2s ease;
-  /*background: rgba(169, 176, 174, 0.3); */
-}
-
 .menu__link-box {
   margin: 30px 20px;  
 }
@@ -60,12 +61,14 @@ $color_base:#fff;
   font-size: 1.3rem;
   font-family: sans-serif;       
   font-weight: 700;                              
-  color: $color_base;    
+  color: $color_base; 
+  &:hover { 
+    transition: 0.4s ease;
+     color: $color-sat;
+  }
+   
 }
 
-.link__title:hover { 
- color: silver;
-}
 
 @media screen and (max-width: 1050px) {
   .menu-mobile {
@@ -80,6 +83,10 @@ $color_base:#fff;
     width: 270px;
     overflow: auto;
     background: rgba(0, 0, 0, 0.7);
+    &:hover {
+      transition: 0.3s ease;
+      background: rgba(0, 0, 0, 0.6); 
+    }   
     animation: demonstration 1s forwards;   
     @keyframes demonstration {
       0% {opacity: 0;}

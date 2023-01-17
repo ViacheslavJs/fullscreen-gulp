@@ -22,7 +22,8 @@ $color_socialnetwork:#cf43ac;
 .social-left__title {
   display: block;
   margin-top: 40px;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
+  font-family: sans-serif;        
   font-size: 1rem; 
   color: $color_base; 
   transform: rotate(90deg);
@@ -128,12 +129,14 @@ $color_socialnetwork:#cf43ac;
   z-index: 50;
   &:hover {
     opacity: 0.6;
-    transition: 0.2s; 
+    color: silver;
+    transition: 0.4s; 
     cursor: pointer;
   }
   &.base-icon-hidden {
-    color: gray;
-    cursor: default;
+    color: silver;
+    cursor: pointer;
+    /*cursor: default; /* TODO - connect this property if you use self-disappearing icons in js */
     animation: my-animation 0.5s forwards;
   }
   @keyframes my-animation {

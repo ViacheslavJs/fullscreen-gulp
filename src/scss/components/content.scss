@@ -1,8 +1,11 @@
 
-$color_base:#fff;
-$color_title:#fd49ac;
-$color_subtitle:#dfc3ac;
-
+$color_base: #fff;
+$color_subtitle: #dfc3ac;
+$color: silver;
+$color-dark: darken($color, 5%);
+$color-light: lighten($color, 20%);
+$color-sat: saturate($color-light, 10%);
+$color-desat: desaturate($color-dark, 10%);
 .page__content {
   position: absolute; 
   top: 28%;                        
@@ -27,10 +30,17 @@ $color_subtitle:#dfc3ac;
   }  
 }
 
-.content__title {
-  max-width: 100%;
-  font-size: 1.4rem;  
-  color: #867983;
+.content__text {
+  max-width: 100%; 
+}
+
+.text__slogan {
+  padding: 0;
+  font-size: 1.4rem; 
+  font-weight: 700;
+  border-radius: 3px;
+  color: $color-sat;
+  background: rgba(0, 0, 0, 0.1);
   @media screen and (orientation: landscape) and (max-width: 1050px) {
     font-size: 1.3rem; 
   }
@@ -42,7 +52,7 @@ $color_subtitle:#dfc3ac;
   }
 }
   
-.content__subtitle {
+.content__title {
   margin-top: -20px;         
   font-size: 4rem; 
   color: $color_base; 
