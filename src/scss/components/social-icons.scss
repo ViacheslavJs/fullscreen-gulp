@@ -2,6 +2,12 @@
 $color_base:#fff;
 $color_socialnetwork:#cf43ac;
 
+$color: gray;
+$color-dark: darken($color, 5%);
+$color-light: lighten($color, 10%);
+$color-sat: saturate($color-light, 3%);
+$color-desat: desaturate($color-light, 10%);
+
 .social-left { 
   display: flex;
   flex-direction: column;
@@ -38,17 +44,18 @@ $color_socialnetwork:#cf43ac;
 .social-left__link {    
   display: block;
   margin: 10px 0 15px 0; 
-  padding: 0px;
-  &:hover {
-    opacity: 0.6;
-    transition: 0.2s;
-  }                           
+  padding: 0px;                           
 }
   
 .social-left-link__icon {
   padding: 5px; 
   font-size: 1.9rem;       
-  color: $color_base;       
+  color: $color_base; 
+  &:hover {
+    color: $color-sat;
+    transition: 0.2s;
+  }
+        
 }
 
 .social-link-bottom {   
@@ -89,7 +96,7 @@ $color_socialnetwork:#cf43ac;
   font-size: 1.9rem;
   color: $color_base;  
   &:hover {
-    opacity: 0.6;
+    color: $color-sat;
     transition: 0.2s; 
   }
 }
@@ -104,7 +111,8 @@ $color_socialnetwork:#cf43ac;
 
 .social-link-bottom.icons-show {
   opacity: 0;
-  animation: anim-to-up 0.8s forwards;   
+  animation: anim-to-up 0.8s forwards; 
+    
   @keyframes anim-to-right {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -117,6 +125,7 @@ $color_socialnetwork:#cf43ac;
     0% {transform: translateY(150%);}
     100% {transform: translateX(0);}
   }
+  
 }
 
 .social-base-icon {
@@ -129,7 +138,7 @@ $color_socialnetwork:#cf43ac;
   z-index: 50;
   &:hover {
     opacity: 0.6;
-    color: silver;
+    color: $color-sat;
     transition: 0.4s; 
     cursor: pointer;
   }

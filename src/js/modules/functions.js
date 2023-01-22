@@ -1,7 +1,7 @@
 'use strict'
 
 // TODO - variant
-// Проверка поддержки webp, добавление класса webp или no-webp для body
+// Проверка поддержки webp, добавление класса webp или no-webp для элемента body
 /*
 export function isWebp() {
 
@@ -29,7 +29,7 @@ export function isWebp() {
 
 
 // TODO - or variant - предпочтительнее
-// Проверка поддержки webp, добавление класса webp или no-webp для HTML
+// Проверка поддержки webp, добавление класса webp или no-webp для элемента HTML
 export function isWebp() {
 
   function testWebP(callback) {

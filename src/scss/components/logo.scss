@@ -1,0 +1,70 @@
+$color_base:#fff;
+$color_logo: gray;
+$color_logo-light: lighten($color_logo, 40%);
+$color_logo-sat: saturate($color_logo-light, 3%);
+$color-dark: darken($color_logo, 3%);
+$color-sat: saturate($color-light, 3%);
+$color-desat: desaturate($color-light, 10%);
+
+
+.text-logo {
+  position: absolute;  
+  top: 0; 
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;                  
+  justify-content: center; 
+  background: rgba(0, 0, 0, 0.1);
+  &:hover {
+    background: $color-dark;
+    transition: 0.4s; 
+    cursor: pointer;
+  }
+}
+
+.text-logo__link {
+  padding: 23px 15px; 
+}
+
+.text-logo-link__icon {  
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $color_base;    
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  /*&:hover {
+    opacity: 0.6;
+    color: $color_logo-sat;
+    transition: 0.4s; 
+    cursor: pointer;
+  }*/
+}
+
+
+
+.image-logo {
+  position: absolute;  box-sizing: border-box; 
+  top: 0; 
+  left: 20px;
+  bottom: -20px;
+  width: calc(2rem + 60px);
+  z-index: 20;
+}
+
+.image-logo-link__image {  
+  display: block; 
+  width: 100%;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  &:hover {
+    opacity: 0.6;
+    color: $color_logo-sat;
+    transition: 0.4s; 
+    cursor: pointer;
+  }
+}
+
+
+

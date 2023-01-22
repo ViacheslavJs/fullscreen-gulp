@@ -1,14 +1,26 @@
 
-header {
-  position: fixed;
+$color_base:#fff;
+$color_logo: gray;
+$color_logo-light: lighten($color_logo, 40%);
+$color_logo-sat: saturate($color_logo-light, 3%);
+$color: #3a86d8;
+$color-dark: darken($color_logo, 3%);
+$color-light: lighten($color, 20%);
+$color-sat: saturate($color-light, 3%);
+$color-desat: desaturate($color-light, 10%);
+
+header.header-main {
+  position: fixed;     
   top: 0;
   left: 0; 
   right: 0;   
+  height: calc(2rem + 40px);     
   z-index: 50;
-  &:hover {
+  /*&:hover {
     transition: 0.7s ease;
-    background: rgba(0, 0, 0, 0.2); 
-  }
+    background: rgba(0, 0, 0, 0.1); 
+  }*/
 }
+
 
 

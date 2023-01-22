@@ -4,10 +4,12 @@
     "title": "Главная"
   })
   <body>
-    @@include('html/header.html', {})
+        
+    @@include('html/main-header.html', {}) 
+      
     <main class="page">
             
-      <div class="page__wrapper"> 
+      <div id="screen-block" class="page__wrapper"> 
                             
         <div class="page__content content">
           <p class="content__text text">
@@ -110,18 +112,18 @@
         
       </div> <!-- page__wrapper -->
 
-      <span class="social-base-icon fas fa-users"></span>
+      <span class="social-base-icon fas fa-users blind-click"></span>
                  
         <a class="social-link-bottom first_to-up" href="https://github.com/viacheslavjs">
-          <span class="social-link-bottom__icon fab fa-instagram"></span>             
+          <span class="social-link-bottom__icon fab fa-instagram blind-click"></span>             
         </a>
                    
         <a class="social-link-bottom second_to-up" href="https://github.com/viacheslavjs">
-          <span class="social-link-bottom__icon fab fa-twitter"></span> 
+          <span class="social-link-bottom__icon fab fa-twitter blind-click"></span> 
         </a>
                     
         <a class="social-link-bottom third_to-up" href="mailto:cherniienko7@gmail.com">
-          <span class="social-link-bottom__icon fab fa-facebook-f"></span>
+          <span class="social-link-bottom__icon fab fa-facebook-f blind-click"></span>
         </a>
           
         <br>    

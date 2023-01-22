@@ -1,0 +1,23 @@
+
+$color_base:#fff;
+$color: #3a86d8;
+$color-dark: darken($color_logo, 3%);
+$color-light: lighten($color, 20%);
+$color-sat: saturate($color-light, 3%);
+$color-desat: desaturate($color-light, 10%);
+
+
+header.header-about,
+header.header-information,
+header.header-more,
+header.header-tours {
+  position: fixed;     
+  top: 0;
+  left: 0; 
+  right: 0;                             
+  height: calc(2rem + 40px);
+  z-index: 50;
+  background: $color-light; /* rgba(0, 0, 0, 0.2); */
+}
+
+
