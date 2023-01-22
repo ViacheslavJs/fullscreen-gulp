@@ -60,6 +60,7 @@ $color-desat: desaturate($color-light, 10%);
 
 .social-link-bottom {   
   display: block;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   
   &.first {
     left: 60px;
@@ -136,6 +137,7 @@ $color-desat: desaturate($color-light, 10%);
   font-size: 1.9rem;
   color: $color_base;    
   z-index: 50;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   &:hover {
     opacity: 0.6;
     color: $color-sat;
