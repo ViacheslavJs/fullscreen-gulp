@@ -45,11 +45,11 @@ $color-desat: desaturate($color-light, 10%);
 
 
 .image-logo {
-  position: absolute;  box-sizing: border-box; 
+  position: absolute;  
   top: 0; 
-  left: 20px;
-  bottom: -20px;
-  width: calc(2rem + 60px);
+  left: 0;
+  width: 100px;
+  height: 100px;
   z-index: 20;
 }
 

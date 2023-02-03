@@ -19,7 +19,7 @@ $color-desat: desaturate($color-light, 10%);
   @media screen and (orientation: portrait) {
     display: none;
   }
-  @media screen and (orientation: landscape) and (max-width: 1050px) { 
+  @media screen and (orientation: landscape) and (max-width: $mobile-big_end-point) { 
     display: none;  
   }
 }
@@ -36,7 +36,7 @@ $color-desat: desaturate($color-light, 10%);
   @media screen and (orientation: portrait) {
     display: none;
   }
-  @media screen and (orientation: landscape) and (max-width: 1050px) { 
+  @media screen and (orientation: landscape) and (max-width: $mobile-big_end-point) { 
     display: none;  
   }
 }
@@ -62,31 +62,31 @@ $color-desat: desaturate($color-light, 10%);
   display: block;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   
-  &.first {
+  &.first_direction_right {
     left: 60px;
   }
 
-  &.second {
+  &.second_direction_right {
     left: 125px;
   }
 
-  &.third {
+  &.third_direction_right {
     left: 190px;
   }
   
-  &.first_to-up {
+  &.first_direction_up {
     bottom: 70px;
   }
 
-  &.second_to-up{
+  &.second_direction_up {
     bottom: 135px;
   }
 
-  &.third_to-up {
+  &.third_direction_up {
     bottom: 200px;
   }
   
-  @media screen and (min-width: 1051px) {
+  @media screen and (min-width: $tablet-small_starting-point) {
     display: none;
   }                   
 }
@@ -106,21 +106,21 @@ $color-desat: desaturate($color-light, 10%);
   position: absolute; 
   left: 0; 
   bottom: 10px; 
-  margin-left: 15px;   
+  margin-left: 10px;   
   z-index: 50;  
 }
 
 .social-link-bottom.icons-show {
   opacity: 0;
-  animation: anim-to-up 0.8s forwards; 
+  animation: direction-up 0.8s forwards; 
     
-  @keyframes anim-to-right {
+  @keyframes direction-right {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: translateX(-150%);}
     100% {transform: translateY(0);}
   }
-  @keyframes anim-to-up {
+  @keyframes direction-up {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: translateY(150%);}
@@ -131,12 +131,12 @@ $color-desat: desaturate($color-light, 10%);
 
 .social-base-icon {
   position: absolute;  
-  left: 10px;
+  left: 5px;
   bottom: 10px;
   padding: 5px;  
   font-size: 1.9rem;
   color: $color_base;    
-  z-index: 50;
+  z-index: 40;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   &:hover {
     opacity: 0.6;
@@ -154,7 +154,7 @@ $color-desat: desaturate($color-light, 10%);
     0% { opacity: 1; }
     100% { opacity: 0.4; }
   }
-  @media screen and (min-width: 1051px) {
+  @media screen and (min-width: $tablet-small_starting-point) {
     display: none;
   }
 }

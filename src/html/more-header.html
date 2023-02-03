@@ -1,29 +1,35 @@
-<header class="header-information">
-  @@include('../html/logo.html', {})
-  <span class="menu-icon fas fa-bars blind-click"></span>
-  <nav class="menu blind-click">
-    <div class="menu__link-box box">
-      <a href="about.html" class="box__link link">
-        <span class="link__title blind-click">About</span>
-      </a>
-    </div>
+<header class="header header_style_background">
+  <div class="container">    
+    <div class="header__inner">
+      @@include('logo.html', {}) 
+      <span class="menu-icon fas fa-bars blind-click"></span>
+      <nav class="menu blind-click">
+        <ul class="menu__list blind-click">
+          <li class="menu__list-item box">
+            <a class="menu__list-link link" href="about.html">
+              <span class="menu__list-title blind-click">About</span>
+            </a>
+          </li>
   
-    <div class="menu__link-box box">
-      <a href="information.html" class="box__link link">
-        <span class="link__title blind-click">Information</span>
-      </a>
-    </div>
+          <li class="menu__list-item box">
+            <a class="menu__list-link link" href="information.html">
+              <span class="menu__list-title blind-click">Information</span>
+            </a>
+          </li>
   
-    <div class="menu__link-box box">
-      <a href="tours.html" class="box__link link">
-        <span class="link__title blind-click">Tours</span>
-      </a>
-    </div>
+          <li class="menu__list-item box">
+            <a class="menu__list-link link" href="tours.html">
+              <span class="menu__list-title blind-click">Tours</span>
+            </a>
+          </li>
   
-    <div class="menu__link-box box">     
-      <span class="title more blind-click">More</span>
+          <li class="menu__list-item box">           
+            <span class="menu__list-title menu__list-title_active blind-click">More</span>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </div> 
 </header>
 
   

@@ -23,12 +23,17 @@ export const scss = () => {
     .pipe(sass({
       outputStyle: 'expanded'
     }))
+    
+    // группировка медиа запросов при build
+    
     .pipe(
       app.plugins.if(
         app.isBuild,
         groupCssMediaQueries()
       )
     )
+    
+    
     .pipe(
       app.plugins.if(
         app.isBuild,

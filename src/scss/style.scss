@@ -1,33 +1,81 @@
 /* Операторы:
   & - имитирует родителя
   > - обращение к первому дочернему элементу */
+@import "helper/brakepoints.scss";
 
 @import "layout/header.scss";
-@import "layout/pages-headers.scss";
-@import "about.scss";
-@import "information.scss";
-@import "tours.scss";
-@import "more.scss";
 @import "layout/footer.scss";
-@import "components/screens.scss";
+
+@import "pages/index.scss";
+@import "pages/about.scss";
+@import "pages/information.scss";
+@import "pages/tours.scss";
+@import "pages/more.scss";
+
 @import "components/controls.scss";
 @import "components/social-icons.scss";
-@import "components/menu-mobile.scss";
-@import "components/content.scss";
+@import "components/menu.scss";
 @import "components/logo.scss";
+
 
 $fz:50px;
 $color_base:#fff;
 $color_title:#fd49ac;
 $color_subtitle:#dfc3ac;
+$color_container: transparent;
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 body {
-  margin: 0; /*TODO*/
+  margin: 0;  
   padding: 0; 
   font-size: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;     
+  min-height: 100vh; 
+  margin: 0;             
+  padding: 0; 
+  overflow: hidden;
+}
+
+.main {
+  /*margin-top: calc(1.9rem + 35px);*/
+  /*background: #ededed; */
+}
+
+.container {
+  max-width: $mobile-big_end-point;          
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (max-width: 350px) {
+    padding: 0 7px;
+  }
+ 
 }
 
 a { 
   text-decoration: none;
 }
+
+ul,
+li {
+  list-style-type: none;
+}
+
+
 

@@ -1,7 +1,6 @@
 
 $color_base:#fff;
 $color: #3a86d8;
-$color-dark: darken($color_logo, 3%);
 $color-light: lighten($color, 5%);
 $color-sat: saturate($color-light, 3%);
 $color-desat: desaturate($color-light, 10%);
@@ -10,21 +9,13 @@ footer {
   max-width: 100%;
   height: auto; /* TODO - necessarily!*/ 
   margin-top: auto;
-  padding: 10px 15px 15px;				
+  padding: 10px 0;				
 	
   border: 1px solid $color-light; /* TODO - border necessarily! */
   background: $color-light;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 100vh; 
-  margin: 0; 
-  padding: 0; 
-  overflow: hidden;
-}
+
 
 
 

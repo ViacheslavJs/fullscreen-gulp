@@ -1,12 +1,11 @@
 
 $color_base:#fff;
 $color: #3a86d8;
-$color-dark: darken($color_logo, 3%);
 $color-light: lighten($color, 20%);
 $color-sat: saturate($color-light, 3%);
 $color-desat: desaturate($color-light, 10%);
 
-.tours-page {
+.more-page {
   margin-top: 150px;
   background: #ededed;
 }

@@ -8,11 +8,7 @@ $color_menu-sat: saturate($color_menu-light, 20%);
 $color-sat: saturate($color-light, 3%);
 $color-desat: desaturate($color-light, 10%);
 
-.menu-icon {
-  position: absolute; 
-  top: 10px; 
-  right: 10px;
-  padding: 5px;  
+.menu-icon {  
   font-size: 1.9rem;
   color: $color_base;    
   z-index: 60;
@@ -23,23 +19,23 @@ $color-desat: desaturate($color-light, 10%);
     transition: 0.4s; 
     cursor: pointer;
   }
-  @media screen and (min-width: 1051px) {
+  @media screen and (min-width: $tablet-small_starting-point) {
     display: none;
   }
 }
 
 .menu {  
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;      
   justify-content: center;               
   align-items: center;  
-  height: 100%;                 
-  &:hover {
+  height: calc(1.9rem + 50px);                 
+  /*&:hover {
     transition: 0.7s ease;
     background: rgba(0, 0, 0, 0.2); 
-  }
+  }*/
   
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: $mobile-big_end-point) {
     display: none;
   }
     
@@ -53,16 +49,41 @@ $color-desat: desaturate($color-light, 10%);
   }
 }
 
-.menu__link-box {
-  margin: 20px 20px;  
+.menu_style_background {
+  /*&:hover {
+    transition: 0.7s ease;
+    background: rgba(0, 0, 0, 0.2); 
+  }*/
 }
 
-.box__link {  
+.menu__list-item {
+  margin: 30px 20px;  
+  list-style: none; 
+}
+
+.menu__list {
+  @media screen and (min-width: $tablet-small_starting-point) {
+    display: flex;
+  }
+}
+
+.header__inner { 
+  position: relative;
+  @media screen and (max-width: $mobile-big_end-point) {
+    display: flex;
+    flex-direction: row;      
+    justify-content: flex-end;           
+    align-items: center; 
+    height: 80px;
+  }
+}
+
+.menu__list-link {  
   text-decoration: none;  
   cursor: pointer;  
 }
 
-.link__title {  
+.menu__list-title {  
   padding: 7px;      
   border-radius: 6px; 
   font-size: 1.3rem;
@@ -76,32 +97,16 @@ $color-desat: desaturate($color-light, 10%);
    
 }
 
-.title.about {
+.menu__list-title_active {
   color: lightgreen;
   font-weight: 700; 
-  cursor: default;  
+  cursor: default; 
+  &:hover { 
+    color: lightgreen;
+  } 
 }
 
-.title.information {
-  color: lightgreen;
-  font-weight: 700; 
-  cursor: default;  
-}
-
-.title.tours {
-  color: lightgreen;
-  font-weight: 700; 
-  cursor: default;  
-}
-
-.title.more {
-  color: lightgreen;
-  font-weight: 700; 
-  cursor: default;  
-}
-
-
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: $mobile-big_end-point) {
   .menu-mobile {
     position: fixed;
     display: flex;
@@ -112,15 +117,19 @@ $color-desat: desaturate($color-light, 10%);
     right: 0;
     bottom: 0;
     z-index: 50;
-    width: 270px;
+    width: 250px;
+    @media screen and (max-width: 345px) {
+      width: 345px;
+    }
+    height: 100%;
     overflow: auto;
-    background: rgba(0, 0, 0, 0.7);
-    .menu__link-box {
-      margin: 40px 20px;  
+    background: rgba(0, 0, 0, 0.8);
+    .menu__list-item {
+      margin: 60px 20px;  
     }
     &:hover {
       transition: 0.3s ease;
-      background: rgba(0, 0, 0, 0.6); 
+      background: rgba(0, 0, 0, 0.7); 
     }   
     animation: demonstration 1s forwards;   
     @keyframes demonstration {
