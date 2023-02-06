@@ -1,6 +1,7 @@
 /* Операторы:
   & - имитирует родителя
   > - обращение к первому дочернему элементу */
+@import "helper/variables.scss";
 @import "helper/brakepoints.scss";
 
 @import "layout/header.scss";
@@ -17,12 +18,6 @@
 @import "components/menu.scss";
 @import "components/logo.scss";
 
-
-$fz:50px;
-$color_base:#fff;
-$color_title:#fd49ac;
-$color_subtitle:#dfc3ac;
-$color_container: transparent;
 
 html {
   box-sizing: border-box;

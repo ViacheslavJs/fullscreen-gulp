@@ -1,13 +1,10 @@
 
-$color: #3a86d8;
-$color-light: lighten($color, 15%);
-
 .header {
   position: fixed;     
   top: 0;
   left: 0; 
   right: 0;   
-  height: calc(1.9rem + 50px);  
+  height: 80.4px; /*calc(1.9rem + 50px);*/ 
   z-index: 50;
   /*&:hover {
     transition: 0.7s ease;
@@ -16,10 +13,14 @@ $color-light: lighten($color, 15%);
 }
 
 .header_style_background {
-  height: calc(1.9rem + 50px);
-  background: $color-light; /* rgba(0, 0, 0, 0.2); */
+  background: $header_bg; 
 }
 
-
+.header__line {
+  height: 10px;
+  margin-top: 0px;
+  border: none;
+  background: $header-line_bg;
+}
 
 

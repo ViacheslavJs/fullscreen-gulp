@@ -1,13 +1,4 @@
 
-$color_base:#fff;
-$color_socialnetwork:#cf43ac;
-
-$color: gray;
-$color-dark: darken($color, 5%);
-$color-light: lighten($color, 10%);
-$color-sat: saturate($color-light, 3%);
-$color-desat: desaturate($color-light, 10%);
-
 .social-left { 
   display: flex;
   flex-direction: column;
@@ -50,9 +41,9 @@ $color-desat: desaturate($color-light, 10%);
 .social-left-link__icon {
   padding: 5px; 
   font-size: 1.9rem;       
-  color: $color_base; 
+  color: $icon-social_color; 
   &:hover {
-    color: $color-sat;
+    color: $icon-social_hover;
     transition: 0.2s;
   }
         
@@ -95,9 +86,9 @@ $color-desat: desaturate($color-light, 10%);
   margin: 0;
   padding: 5px; 
   font-size: 1.9rem;
-  color: $color_base;  
+  color: $icon-social_color;  
   &:hover {
-    color: $color-sat;
+    color: $icon-social_hover;
     transition: 0.2s; 
   }
 }
@@ -135,12 +126,12 @@ $color-desat: desaturate($color-light, 10%);
   bottom: 10px;
   padding: 5px;  
   font-size: 1.9rem;
-  color: $color_base;    
+  color: $icon-social_color;    
   z-index: 40;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   &:hover {
     opacity: 0.6;
-    color: $color-sat;
+    color: $icon-social_hover;
     transition: 0.4s; 
     cursor: pointer;
   }

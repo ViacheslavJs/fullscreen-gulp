@@ -1,11 +1,5 @@
 
-$color_base:#fff;
-$color: #3a86d8;
-$color-light: lighten($color, 20%);
-$color-sat: saturate($color-light, 3%);
-$color-desat: desaturate($color-light, 10%);
-
 .more-page {
-  margin-top: 150px;
+  margin-top: 100px;
   background: #ededed;
 }

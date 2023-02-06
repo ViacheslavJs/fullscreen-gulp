@@ -1,12 +1,4 @@
 
-$color_base: #fff;
-$color_subtitle: #dfc3ac;
-$color: silver;
-$color-dark: darken($color, 5%);
-$color-light: lighten($color, 20%);
-$color-sat: saturate($color-light, 10%);
-$color-desat: desaturate($color-dark, 10%);
-
 .loading-icon {
   /*display: none; /* TODO */
   position: absolute; 
@@ -186,7 +178,7 @@ $color-desat: desaturate($color-dark, 10%);
   font-size: 1.2rem; 
   font-weight: 700;
   border-radius: 3px;
-  color: $color-sat;
+  color: #f4f2f2;
   background: rgba(0, 0, 0, 0.1);
 
   @media screen and (min-width: $tablet-small_starting-point) {

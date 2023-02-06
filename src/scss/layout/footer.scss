@@ -1,22 +1,100 @@
 
-$color_base:#fff;
-$color: #3a86d8;
-$color-light: lighten($color, 5%);
-$color-sat: saturate($color-light, 3%);
-$color-desat: desaturate($color-light, 10%);
+$color_logo: #3a86d8;
+$color_logo-light: lighten($color_logo, 10%);
+$social_color-hover: #3a86d8;
+$color_logo-light: lighten($social_color-hover, 17%);
+$color-dark: darken($color_logo, 3%);
 
 footer {
   max-width: 100%;
-  height: auto; /* TODO - necessarily!*/ 
+  height: auto; /* TODO - necessarily!*/  
   margin-top: auto;
-  padding: 10px 0;				
-	
-  border: 1px solid $color-light; /* TODO - border necessarily! */
-  background: $color-light;
+  padding: 10px 0 0 0;					
+  border: 1px solid $footer_bg; /* TODO - border necessarily! */ 
+  background: $footer_bg;   
 }
 
+.footer__content {
+  display: flex;
+  flex-direction: row-reverse;                  
+  justify-content: space-between;  
+  align-items: center;
+  @media screen and (max-width: 560px) { 
+    flex-direction: column;;  
+  }
+  
+}
 
+.footer {
+  &__logo {   
+    display: flex;
+    flex-direction: row;                   
+    justify-content: center;   
+    align-items: center; 
+    height: 4.6em; 
+    font-size: 16px;  
+    &:hover {    
+      transition: 0.4s; 
+      cursor: pointer;
+    }    
+  }
 
+  &__logo-link {
+    position: relative;                     
+    padding: 1.5em 1em 1.5em 1.5em;
+    @media screen and (min-width: 561px) { 
+      padding: 1.5em 1em 1.5em 0em; 
+    }  
+  }
 
+  &__logo-link:hover::before {
+    position: absolute;
+    content: "";
+    right: -2.2em; 
+    bottom: 0em;
+    height: 0;
+    width: 0;
+    border-left: 2.2em solid $footer-logo_hover;
+    border-top: 2.4em solid transparent;
+    border-bottom: 2.4em solid transparent; 
+  }
 
+  &__logo-text {    
+    font-size: 1.4em;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: $color_base;      
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  }
+  
+}  
+
+.footer-social { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  align-items: center;
+  padding: 40px 0; 
+  
+  &__link {    
+    display: block;
+    margin: 15px 15px 15px 15px;
+    padding: 0; 
+    @media screen and (min-width: 561px) { 
+      margin: 15px 0 15px 40px;  
+    }                          
+  }
+  
+  &__icon {
+    padding: 0; 
+    font-size: 1.9rem;       
+    color: $color_base; 
+    &:hover {
+      color: $icon-social_hover;
+      transition: 0.2s;
+    }        
+  }
+  
+}
+  
 

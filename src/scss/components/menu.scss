@@ -1,21 +1,12 @@
 
-$color_base:#fff;
-$color: gray;
-$color-dark: darken($color, 5%);
-$color-light: lighten($color, 20%);
-$color_menu-light: lighten($color, 40%);
-$color_menu-sat: saturate($color_menu-light, 20%);
-$color-sat: saturate($color-light, 3%);
-$color-desat: desaturate($color-light, 10%);
-
 .menu-icon {  
-  font-size: 1.9rem;
+  font-size: 30px;
   color: $color_base;    
   z-index: 60;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   &:hover {
     opacity: 0.6;
-    color: $color_menu-sat;
+    color: $icon-menu_hover;
     transition: 0.4s; 
     cursor: pointer;
   }
@@ -29,7 +20,7 @@ $color-desat: desaturate($color-light, 10%);
   flex-direction: row;      
   justify-content: center;               
   align-items: center;  
-  height: calc(1.9rem + 50px);                 
+  height: 80.4px; /*calc(1.9rem + 50px);*/                 
   /*&:hover {
     transition: 0.7s ease;
     background: rgba(0, 0, 0, 0.2); 
@@ -92,17 +83,17 @@ $color-desat: desaturate($color-light, 10%);
   color: $color_base; 
   &:hover { 
     transition: 0.4s ease;
-    color: $color-sat;
+    color: $link-menu_hover;
   }
    
 }
 
 .menu__list-title_active {
-  color: lightgreen;
+  color: $link-menu-active_color;
   font-weight: 700; 
   cursor: default; 
   &:hover { 
-    color: lightgreen;
+    color: $link-menu-active_color;
   } 
 }
 

@@ -1,14 +1,17 @@
 
-$color_base:#fff;
+$color_base: #ffffff;
 $color: #3a86d8;
-$background: #ededed;
+$card-icon_color: #77aaf6;
+$card-title_color: #f29012;
+
+/*$background: #ededed;
 $background-dark: darken($background, 5%);
 $color-light: lighten($color, 20%);
 $color-sat: saturate($color-light, 3%);
-$color-desat: desaturate($color-light, 10%);
+$color-desat: desaturate($color-light, 10%);*/
 
 .about {
-  margin-top: calc(100px); 
+  margin-top: 100px; 
   font-family: sans-serif;  
 
   &__prev-title {
@@ -82,8 +85,7 @@ $color-desat: desaturate($color-light, 10%);
     height: 110vh;  	
     background-size: cover;
     background-position: 0% 100%;   
-    background-repeat: no-repeat;   
-    border: 1px solid $border_color;    
+    background-repeat: no-repeat;     
   }
   */
 
@@ -119,7 +121,7 @@ $color-desat: desaturate($color-light, 10%);
     font-size: 1.5rem;     
     text-align: center; 
     letter-spacing: 6px;  
-    color: #fff;
+    color: #ffffff;
     @media screen and (min-width: 645px) {
       font-size: 1.75rem;
     }  
@@ -162,9 +164,10 @@ $color-desat: desaturate($color-light, 10%);
 .card {
   &__link {  
     display: block;
-    width: 90px;
-    height: 90px;  
-    margin: 30px 5px 10px 5px;       
+    width: 80px;
+    height: 80px;  
+    margin: 30px 5px 10px 5px;  
+    font-size: 16px;      
     border-radius: 50%;  
     
     display: flex;               
@@ -181,8 +184,8 @@ $color-desat: desaturate($color-light, 10%);
     display: block;
     width: 100%;
     height: 100%;           
-    font-size: 3rem;               
-    color: #77aaf6;
+    font-size: 2.7em;               
+    color: $card-icon_color;
     border-radius: 50%; 
     background: #f6f6f6; 
   
@@ -211,7 +214,7 @@ $color-desat: desaturate($color-light, 10%);
     font-weight: 700; 
     text-align: left;  
     word-break: break-all;                            
-    color: #f29012;   
+    color: $card-title_color;   
   }
   
   &__card-text {
@@ -273,7 +276,7 @@ $color-desat: desaturate($color-light, 10%);
     flex-basis: 0%;            
     
     max-width: 100%; 
-    margin-top: 40px; 
+    margin-top: 40px;   
     margin-bottom: 40px;    
     padding: 0;
     @media screen and (min-width: 768px) {               
@@ -300,7 +303,8 @@ $color-desat: desaturate($color-light, 10%);
   justify-content: flex-start;  
   align-items: center;
   margin: 8px 0;
-  padding: 5px;   
+  padding: 5px; 
+  font-size: 16px;  
   
   &__button {
     display: block; 
@@ -316,7 +320,7 @@ $color-desat: desaturate($color-light, 10%);
 
   &__button-text{
     display: block;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     text-align: center;  
     white-space: nowrap;
@@ -359,7 +363,7 @@ $color-desat: desaturate($color-light, 10%);
     
   &__info-text {    
     max-width: 100%; 
-    margin: 8px 0;
+    margin: 8px 0;              
     padding: 5px;          
     text-align: left;   
     color: gray;  
@@ -385,11 +389,11 @@ $color-desat: desaturate($color-light, 10%);
     
     display: flex; 
     flex-direction: column-reverse;   
-    align-items: center;
+    align-items: center;                
     /*align-self: flex-start;*/
   
     max-width: 100%;     
-    margin-bottom: 0;
+    margin-bottom: 40px;     
     padding: 0;
     @media screen and (min-width: 768px) {               
       margin: 0.5rem 0 0px 0;
@@ -437,6 +441,7 @@ $color-desat: desaturate($color-light, 10%);
   align-items: center;
   margin: 8px 5px;
   padding: 5px 0;
+  font-size: 16px;
   border-radius: 20px;
   background: #f29012;  
   
@@ -444,10 +449,10 @@ $color-desat: desaturate($color-light, 10%);
     display: block; 
     margin: 5px 0 5px 10px; 
     padding: 5px;                   
-    font-size: 2rem; 
+    font-size: 2em; 
     color: #ffffff; 
     @media screen and (min-width: 645px) {
-      font-size: 2.5rem;
+      font-size: 2.5em;
     }  
         
     /*
@@ -615,6 +620,7 @@ $color-desat: desaturate($color-light, 10%);
   align-items: center;
   margin: 8px 0;
   padding: 5px 0; 
+  font-size: 16px;
   @media screen and (min-width: 768px) {         
     justify-content: flex-end;
   }
@@ -634,7 +640,7 @@ $color-desat: desaturate($color-light, 10%);
 
   &__button-text{
     display: block;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     text-align: center;  
     white-space: nowrap;
@@ -644,7 +650,6 @@ $color-desat: desaturate($color-light, 10%);
   }
     
 }
-
 
 /********** module guide ***********/
 
@@ -751,7 +756,8 @@ $color-desat: desaturate($color-light, 10%);
   justify-content: flex-start;  
   align-items: center;
   margin: 8px 0;
-  padding: 5px 0; 
+  padding: 5px 0;
+  font-size: 16px; 
   
   &__icon-link {  
     display: block; 
@@ -767,12 +773,12 @@ $color-desat: desaturate($color-light, 10%);
   &__icon {   
     display: block; 
     padding: 15px;    
-    font-size: 1.5rem; 
+    font-size: 1.5em; 
     border-radius:  50%;                
     color: #ffffff; 
     background: #77aaf6;
     @media screen and (min-width: 645px) {
-      font-size: 2.4rem;
+      font-size: 2.4em;
       padding: 20px;
     }  
   }
@@ -780,30 +786,29 @@ $color-desat: desaturate($color-light, 10%);
   &__phone-box {
     display: flex;
     flex-direction: column; 
-    justify-content: center;      
+    justify-content: center;       
     align-items: flex-start;     
     padding: 5px;
   }
   
   &__phone-subtitle {
-   max-width: 100%;
-   margin: 0 5px 10px 5px;
+   max-width: 100%;               
+   margin: 0 0 10px 0;
    padding: 0;               
    font-weight: 400;         
-   font-size: 1.4rem; 
+   font-size: 1.4em; 
    letter-spacing: 1px;
    color: #535957;    
    @media screen and (min-width: 645px) {
-      font-size: 1.6rem;
+      font-size: 1.6em;
     }  
   }
   
   &__phone-link {
     display: block; 
     margin: 0;             
-    padding: 0;    
-    border-radius: 6px;           
-    font-size: 1.3rem;   
+    padding: 0;               
+    font-size: 1.3em;      
     font-weight: 900;    
     letter-spacing: 1px;                       
     color: #77aaf6;
@@ -812,7 +817,7 @@ $color-desat: desaturate($color-light, 10%);
       cursor: pointer;
     }   
     @media screen and (min-width: 645px) {
-      font-size: 1.5rem;
+      font-size: 1.5em;
     }
   }
      
