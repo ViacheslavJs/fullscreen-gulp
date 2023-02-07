@@ -1,6 +1,7 @@
 /* Операторы:
   & - имитирует родителя
   > - обращение к первому дочернему элементу */
+  
 @import "helper/variables.scss";
 @import "helper/brakepoints.scss";
 
@@ -18,7 +19,7 @@
 @import "components/menu.scss";
 @import "components/logo.scss";
 
-
+/* reset, normalize */
 html {
   box-sizing: border-box;
 }
@@ -49,8 +50,7 @@ body {
 }
 
 .main {
-  /*margin-top: calc(1.9rem + 35px);*/
-  /*background: #ededed; */
+  
 }
 
 .container {
@@ -64,13 +64,13 @@ body {
 }
 
 a { 
-  text-decoration: none;
+  text-decoration: none;    
+  cursor: pointer;  
 }
 
 ul,
 li {
   list-style-type: none;
 }
-
 
 

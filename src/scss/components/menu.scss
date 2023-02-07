@@ -1,4 +1,15 @@
 
+.header__inner { 
+  position: relative;
+  @media screen and (max-width: $mobile-big_end-point) {
+    display: flex;
+    flex-direction: row;      
+    justify-content: flex-end;           
+    align-items: center; 
+    height: 80px;
+  }
+}
+
 .menu-icon {  
   font-size: 30px;
   color: $color_base;    
@@ -20,16 +31,10 @@
   flex-direction: row;      
   justify-content: center;               
   align-items: center;  
-  height: 80.4px; /*calc(1.9rem + 50px);*/                 
-  /*&:hover {
-    transition: 0.7s ease;
-    background: rgba(0, 0, 0, 0.2); 
-  }*/
-  
+  height: 80.4px;                   
   @media screen and (max-width: $mobile-big_end-point) {
     display: none;
-  }
-    
+  }    
   opacity: 0;
   animation: descent 0.8s forwards; 
   @keyframes descent {
@@ -38,63 +43,47 @@
     0% {transform: translateY(-50%);}
     100% {transform: translateX(0);}
   }
-}
-
-.menu_style_background {
-  /*&:hover {
-    transition: 0.7s ease;
-    background: rgba(0, 0, 0, 0.2); 
-  }*/
-}
-
-.menu__list-item {
-  margin: 30px 20px;  
-  list-style: none; 
-}
-
-.menu__list {
-  @media screen and (min-width: $tablet-small_starting-point) {
-    display: flex;
+  
+  &__list {
+    @media screen and (min-width: $tablet-small_starting-point) {
+      display: flex;
+    }
   }
-}
-
-.header__inner { 
-  position: relative;
-  @media screen and (max-width: $mobile-big_end-point) {
-    display: flex;
-    flex-direction: row;      
-    justify-content: flex-end;           
-    align-items: center; 
-    height: 80px;
+  
+  &__list-item {
+    margin: 30px 20px;  
   }
-}
-
-.menu__list-link {  
-  text-decoration: none;  
-  cursor: pointer;  
-}
-
-.menu__list-title {  
-  padding: 7px;      
-  border-radius: 6px; 
-  font-size: 1.3rem;
-  font-family: sans-serif;       
-  font-weight: 700;                              
-  color: $color_base; 
-  &:hover { 
-    transition: 0.4s ease;
-    color: $link-menu_hover;
+  
+  &__list-title {  
+    padding: 7px;      
+    border-radius: 6px; 
+    font-size: 1.3rem;
+    font-family: sans-serif;       
+    font-weight: 700;                              
+    color: $color_base; 
+    &:hover { 
+      transition: 0.4s ease;
+      color: $link-menu_hover;
+    }   
   }
-   
-}
-
-.menu__list-title_active {
-  color: $link-menu-active_color;
-  font-weight: 700; 
-  cursor: default; 
-  &:hover { 
+  
+  &__list-title--active {
     color: $link-menu-active_color;
-  } 
+    font-weight: 700; 
+    cursor: default; 
+    &:hover { 
+      color: $link-menu-active_color;
+    } 
+  }
+
+  &--style_background {
+    /*&:hover {
+      transition: 0.7s ease;
+      background: rgba(0, 0, 0, 0.2); 
+    }*/
+  }
+
+  
 }
 
 @media screen and (max-width: $mobile-big_end-point) {

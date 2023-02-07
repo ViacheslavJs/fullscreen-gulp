@@ -24,15 +24,15 @@ export const scss = () => {
       outputStyle: 'expanded'
     }))
     
-    // группировка медиа запросов при build
-    
+    // TODO - группировка медиа запросов при build или dev
+    /*
     .pipe(
       app.plugins.if(
         app.isBuild,
         groupCssMediaQueries()
       )
     )
-    
+    */
     
     .pipe(
       app.plugins.if(

@@ -1,5 +1,5 @@
 
-.social-left { 
+.social-full { 
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -16,7 +16,7 @@
 }
 
 
-.social-left__title {
+.social-full__title {
   display: block;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -32,13 +32,13 @@
   }
 }
   
-.social-left__link {    
+.social-full__link {    
   display: block;
   margin: 10px 0 15px 0; 
   padding: 0px;                           
 }
   
-.social-left-link__icon {
+.social-full__icon {
   padding: 5px; 
   font-size: 1.9rem;       
   color: $icon-social_color; 
@@ -49,31 +49,35 @@
         
 }
 
-.social-link-bottom {   
+.social-mobile {
+  
+}
+
+.social-mobile__link {   
   display: block;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   
-  &.first_direction_right {
+  &.first--direction_right {
     left: 60px;
   }
 
-  &.second_direction_right {
+  &.second--direction_right {
     left: 125px;
   }
 
-  &.third_direction_right {
+  &.third--direction_right {
     left: 190px;
   }
   
-  &.first_direction_up {
+  &.first--direction_up {
     bottom: 70px;
   }
 
-  &.second_direction_up {
+  &.second--direction_up {
     bottom: 135px;
   }
 
-  &.third_direction_up {
+  &.third--direction_up {
     bottom: 200px;
   }
   
@@ -82,7 +86,7 @@
   }                   
 }
 
-.social-link-bottom__icon {
+.social-mobile__icon {
   margin: 0;
   padding: 5px; 
   font-size: 1.9rem;
@@ -98,10 +102,10 @@
   left: 0; 
   bottom: 10px; 
   margin-left: 10px;   
-  z-index: 50;  
+  z-index: 40;  
 }
 
-.social-link-bottom.icons-show {
+.social-mobile__link.icons-show {
   opacity: 0;
   animation: direction-up 0.8s forwards; 
     
@@ -120,7 +124,7 @@
   
 }
 
-.social-base-icon {
+.social-mobile__base-icon {
   position: absolute;  
   left: 5px;
   bottom: 10px;
@@ -138,9 +142,16 @@
   &.base-icon-hidden {
     color: silver;
     cursor: pointer;
-    /*cursor: default; /* TODO - connect this property if you use self-disappearing icons in js */
     animation: my-animation 0.5s forwards;
   }
+  
+  &.cursor-inactive {
+    /* TODO - this class is used when self-disappearing icons feature is enabled in js */
+    color: silver;
+    cursor: default;
+    animation: my-animation 0.5s forwards;
+  }
+  
   @keyframes my-animation {
     0% { opacity: 1; }
     100% { opacity: 0.4; }

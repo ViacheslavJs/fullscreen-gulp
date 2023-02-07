@@ -7,9 +7,10 @@ vjsFunctions.isWebp();
 //import { scrollFunc } from "./modules/scroll.js";
 //scrollFunc();
 
+
 // TODO - or (icon show/animation)
-const socialNetworkIcon = document.querySelector('.social-base-icon');
-const link = document.querySelectorAll('.social-link-bottom');
+const socialNetworkIcon = document.querySelector('.social-mobile__base-icon');
+const link = document.querySelectorAll('.social-mobile__link');
  
 link.forEach(w => {
   socialNetworkIcon.addEventListener('click', showIcons);
@@ -32,21 +33,22 @@ link.forEach(w => {
      
 });
 
+
 /*
 // TODO - or (self-disappearance icon show/animation)
 // connect 'cursor: default' property if using this js block
-const socialNetworkIcon = document.querySelector('.social-base-icon');
-const link = document.querySelectorAll('.social-link-bottom');
+const socialNetworkIcon = document.querySelector('.social-mobile__base-icon');
+const link = document.querySelectorAll('.social-mobile__link');
  
 link.forEach(w => {
   socialNetworkIcon.addEventListener('click', showIcons);
   function showIcons() {
     w.classList.add('icons-show');
-    socialNetworkIcon.classList.add('base-icon-hidden');
+    socialNetworkIcon.classList.add('cursor-inactive');
     socialNetworkIcon.removeEventListener('click', showIcons);
     setTimeout( function() {
       w.classList.remove('icons-show');
-      socialNetworkIcon.classList.remove('base-icon-hidden');
+      socialNetworkIcon.classList.remove('cursor-inactive');
       socialNetworkIcon.addEventListener('click', showIcons);
     }, 7000); 
   }    
