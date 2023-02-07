@@ -6,10 +6,9 @@
   right: 0;   
   height: 80.4px; 
   z-index: 50;
-  /*&:hover {
-    transition: 0.7s ease;
-    background: rgba(0, 0, 0, 0.1); 
-  }*/
+  @media screen and (max-width: $mobile-big_end-point) {
+    height: 53.6px;
+  }
 }
 
 .header--style_background {
