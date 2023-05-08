@@ -1,0 +1,830 @@
+
+$color_base: #ffffff;
+$color: #3a86d8;
+$card-icon_color: #77aaf6;
+$card-title_color: #f29012;
+
+/*$background: #ededed;
+$background-dark: darken($background, 5%);
+$color-light: lighten($color, 20%);
+$color-sat: saturate($color-light, 3%);
+$color-desat: desaturate($color-light, 10%);*/
+
+.about {
+  margin-top: 100px; 
+  font-family: sans-serif;  
+
+  &__prev-title {
+    /*font-size: calc(25px + (40 + 40 * 0.7) *(100vw - 320px) / 1170);*/
+    /*margin-top: calc(25px + (40 + 40 * 0.7) *(100vw - 320px) / 1170);*/
+    /*font-size: calc(3rem + 1vh);*/
+    margin-top: calc(0.8em + 1vh);
+    font-size: 2.4rem;
+    text-align: right;
+    text-transform: none; 
+    line-height: 1.1;
+    color: #f29012; 
+    @media screen and (min-width: 540px) {
+      font-size: 2.8rem;
+      text-align: right; 
+    }
+    @media screen and (min-width: 645px) {
+      font-size: 3rem;
+      text-align: right; 
+    }
+    @media screen and (min-width: 752px) {
+      font-size: 3.7rem;   
+    }
+    @media screen and (min-width: 991px) {
+      font-size: 4.5rem; 
+    }
+  }
+
+  &__prev-text {  
+    margin-top: -25px;
+    margin-left: 50%;
+    font-size: 1.1rem;  
+    font-style: italic;
+    font-weight: 700;
+    text-align: right;
+    letter-spacing: 1px;
+    text-transform: none;
+    color: #7aade5;
+    @media screen and (min-width: 540px) {
+      font-size: 1.3rem; 
+    } 
+  }
+
+  &__prev-images {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__inner-flex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: -100px;
+    @media screen and (min-width: 451px) {
+      margin-bottom: -150px;
+    }
+    @media screen and (min-width: 540px) {
+      margin-bottom: -200px; 
+    }
+    @media screen and (min-width: 752px) {
+      margin-bottom: -250px;   
+    }   
+  }
+
+  /*
+  &__prev {
+    background-image: url('../img/travels.png'); 
+    display: block;
+    max-width: 100%;
+    height: 110vh;  	
+    background-size: cover;
+    background-position: 0% 100%;   
+    background-repeat: no-repeat;     
+  }
+  */
+
+  &__content { 
+    background: #77aaf6;
+  }
+
+}
+
+/***** TODO - module cards *********************/
+.cards {
+  max-width: calc(100%); 
+  margin-bottom: 10px;
+  padding: 30px 0;
+  background: #77aaf6;   
+  
+  &__prev-title {  
+    margin: 0px 5px;
+    padding: 0; 
+    text-align: center;
+    font-size: 2rem; 
+    /*font-size: calc(25px + (40 + 40 * 0.7) *(100vw - 320px) / 1920);*/
+    font-weight: bold;       
+    color: #ffffff;
+    @media screen and (min-width: 645px) {
+      font-size: 2.8rem;
+    }   
+  }
+  
+  &__prev-text {    
+    max-width: 100%; 
+    margin: 20px 0px 50px 0px;
+    font-size: 1.5rem;     
+    text-align: center; 
+    letter-spacing: 6px;  
+    color: #ffffff;
+    @media screen and (min-width: 645px) {
+      font-size: 1.75rem;
+    }  
+  }
+ 
+}
+
+/***** grid/flex *****/
+.cards__cards-box {
+  display: grid;
+  grid-gap: 20px;  
+  grid-template-columns: repeat(1, 1fr); 
+  grid-auto-rows: minmax(100px, auto);
+  @media screen and (min-width: 548px) {       
+    grid-template-columns: repeat(2, 1fr);      
+  }  
+  @media screen and (min-width: 750px) {      
+    grid-template-columns: repeat(3, 1fr);      
+  }
+  @media screen and (min-width: 991px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+  }
+            
+}
+  
+.cards-box__card {    
+  &.card {
+    border-radius: 20px;
+    background: #f6f6f6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* TODO - shadow */
+    @media screen and (min-width: 991px) {
+      width: 215px;   
+    }
+  }
+    
+}
+
+.card {
+  &__link {  
+    display: block;
+    width: 80px;
+    height: 80px;  
+    margin: 30px 5px 10px 5px;  
+    font-size: 16px;      
+    border-radius: 50%;  
+    
+    display: flex;               
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      opacity: 0.6; 
+      cursor: pointer;
+    }   
+  }
+  
+  &__link-icon { 
+    display: block;
+    width: 100%;
+    height: 100%;           
+    font-size: 2.7em;               
+    color: $card-icon_color;
+    border-radius: 50%; 
+    background: #f6f6f6; 
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    
+    /* TODO - https://www.cssmatic.com/box-shadow - Box Shadow CSS Generator */
+    /*-webkit-box-shadow: 0px 16px 19px -10px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 16px 19px -10px rgba(204,204,204,1);
+    box-shadow: 0px 16px 19px -10px rgba(204,204,204,1); */  
+    -webkit-box-shadow: 0px 6px 10px 1px rgba(112,112,112,0.19);
+    -moz-box-shadow: 0px 6px 10px 1px rgba(112,112,112,0.19);
+    box-shadow: 0px 6px 10px 1px rgba(112,112,112,0.19);  
+  }
+  
+  &__card-title {
+    height: calc(1.3rem * 4);
+    margin: 8px 0;             
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1.3rem;
+    font-weight: 700; 
+    text-align: left;  
+    word-break: break-all;                            
+    color: $card-title_color;   
+  }
+  
+  &__card-text {
+    margin: 10px 0;         
+    padding: 5px;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    color: #808080;     
+  }  
+  
+}
+
+.fas.fa-plane {
+  transform: rotate(315deg);
+}
+
+/***** TODO - module programs *********************/
+.programs {  
+  display: flex;  
+  flex-direction: column-reverse; 
+  justify-content: space-between;        
+  align-items: center;      
+  max-width: 100%;                               
+  margin: 0px auto;
+  padding: 0; 
+  @media screen and (min-width: 768px) {         
+    flex-direction: row-reverse;
+  }
+  
+  &__info-images {                 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%; 
+    
+    display: flex; 
+    flex-direction: column-reverse;      
+    align-items: center;
+  
+    max-width: 100%;     
+    margin-bottom: 40px;
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 50px 0 50px 0;
+    }  
+  }
+  
+  &__image { 
+    display: block;       
+    max-width: 100%;             
+    margin: 0 auto; 
+    object-fit: cover;    
+    /*visibility: hidden; /* TODO */
+  }
+  
+  &__info {                      
+    flex-grow: 1;
+    flex-shrink: 1;     
+    flex-basis: 0%;            
+    
+    max-width: 100%; 
+    margin-top: 40px;   
+    margin-bottom: 40px;    
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 50px 0 50px 0;    
+    } 
+  }
+    
+  &__title {    
+    max-width: 100%; 
+    margin: 8px 0 40px 0;
+    padding: 5px;          
+    text-align: left;   
+    color: gray;  
+    letter-spacing: 0px;    
+    line-height: 1.8;
+    font-size: 1.6rem; 
+  }
+   
+}
+
+.programs-links {               
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;  
+  align-items: center;
+  margin: 8px 0;
+  padding: 5px; 
+  font-size: 16px;  
+  
+  &__button {
+    display: block; 
+    padding: 15px 20px;
+    border-radius: 50px;
+    background: #77aaf6;    
+    text-decoration: none;
+    &:hover {
+      opacity: 0.7; 
+      cursor: pointer;
+    }
+  }
+
+  &__button-text{
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;  
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    color: #ffffff;
+  }
+    
+}
+
+/********** module programs ***********/
+
+
+/***** TODO - module description *******/
+.description {  
+  display: flex;  
+  flex-direction: column-reverse;      
+  align-items: flex-start;      
+  max-width: 100%;                               
+  margin: 0px auto;
+  padding: 0; 
+  @media screen and (min-width: 768px) {         
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+  
+  &__info {                      
+    flex-grow: 1;
+    flex-shrink: 1;     
+    flex-basis: 0%;
+    
+    max-width: 100%; 
+    margin-top: 0;             
+    margin-bottom: 0;    
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 0px 0 50px 0;    
+    } 
+  }
+    
+  &__info-text {    
+    max-width: 100%; 
+    margin: 8px 0;              
+    padding: 5px;          
+    text-align: left;   
+    color: gray;  
+    letter-spacing: 0px;    
+    line-height: 1.8;
+    font-size: 1.2rem; 
+  }
+  
+  &__info-note {
+    margin: 15px 0; 
+    padding: 5px;
+    letter-spacing: 0px;      
+    line-height: 1.8;                  
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #697370;  
+  }
+  
+  &__list {                 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%; 
+    
+    display: flex; 
+    flex-direction: column-reverse;   
+    align-items: center;                
+    /*align-self: flex-start;*/
+  
+    max-width: 100%;     
+    margin-bottom: 40px;     
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 0.5rem 0 0px 0;
+    }  
+  }
+  
+  &__list-item { 
+    position: relative;
+    max-width: 100%; 
+    height: auto;
+    margin: 8px 1.3em;
+    padding: 5px 1em;
+    
+    text-align: left;   
+    color: gray;                      
+    letter-spacing: 0px;    
+    line-height: 1.8;
+    font-size: 1.2rem;
+    
+    &::after {
+      display: block;
+	  content: '';
+	  position: absolute;
+	  top: 0.7em;
+	  left: -1em;
+	  width: 1.2em;
+	  height: 0.5em;
+	  border-left: 3px solid #3498db;
+	  border-bottom: 3px solid #3498db;
+	  -webkit-transform: rotate(-45deg);
+	  transform: rotate(-45deg);
+    }                                    
+  }
+  
+  &__list-text { 
+    
+  }
+   
+}
+
+.warning {               
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;  
+  align-items: center;
+  margin: 8px 5px;
+  padding: 5px 0;
+  font-size: 16px;
+  border-radius: 20px;
+  background: #f29012;  
+  
+  &__warning-icon {   
+    display: block; 
+    margin: 5px 0 5px 10px; 
+    padding: 5px;                   
+    font-size: 2em; 
+    color: #ffffff; 
+    @media screen and (min-width: 645px) {
+      font-size: 2.5em;
+    }  
+        
+    /*
+    &::before {
+      display: block;
+      content: "\f06a";  
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      margin: 5px 0 5px 5px; 
+      padding: 5px;                   
+      font-size: 2rem; 
+      color: #ffffff; 
+      @media screen and (min-width: 645px) {
+        font-size: 2.5rem;
+      }   
+    }
+    */
+  }
+  
+  &__warning-text {
+    margin: 8px;
+    padding: 5px;          
+    text-align: left;   
+    color: #fff;  
+    letter-spacing: 0px;    
+    line-height: 1.8;
+    font-size: 1.1rem; 
+  }
+       
+}
+
+/* "\2014" - minus symbol */
+/* "\f00c" - check symbol */
+
+/********** module description ***********/
+
+/***** TODO - module guide *********************/
+.guide {  
+  display: flex;  
+  flex-direction: column;         
+  align-items: center;                  
+  max-width: 100%;                               
+  margin: 0px auto;
+  padding: 0;   
+  @media screen and (min-width: 768px) {         
+    flex-direction: row;
+  }
+  
+  &__info-images {                 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%; 
+    
+    display: flex; 
+    flex-direction: column-reverse;   
+    align-items: center;
+  
+    max-width: 100%;  
+    margin-top: 40px;  
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;  
+    
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 50px 0 50px 0;
+    }  
+  }
+  
+  &__image { 
+    display: block;       
+    max-width: 100%; 
+    margin: 0 auto;
+    border-radius: 50px; 
+    object-fit: cover;    
+    /*visibility: hidden; /* TODO */
+    @media screen and (min-width: 485px) and (max-width: 767px) {         
+      max-width: 70%;
+    }
+    @media screen and (min-width: 768px) {         
+      max-width: 100%;
+    }
+  }
+  
+  &__info {                      
+    flex-grow: 1;
+    flex-shrink: 1;     
+    flex-basis: 0%;
+    
+    max-width: 100%;                
+    margin-top: 10px; 
+    margin-right: 15px;
+    margin-bottom: 40px;  
+    margin-left: 15px;
+      
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 50px 0 50px 0;    
+    } 
+  }
+  
+  &__subtitle {  
+    margin: 8px 0 0 0;         
+    padding: 5px 0;
+    font-size: 1.2rem;        
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: #ffffff;
+    @media screen and (min-width: 768px) { 
+      margin: 8px -8px 0 0;        
+      text-align: right;
+    }    
+    @media screen and (min-width: 645px) {
+      font-size: 1.4rem;
+    }  
+  }
+    
+  &__text {    
+    max-width: 100%;               
+    margin: 0px 0 20px 0;
+    padding: 5px 15px; 
+    font-size: 1.2rem; 
+    letter-spacing: 0px;    
+    line-height: 2;        
+    text-align: center;
+    color: #ffffff;  
+    @media screen and (min-width: 768px) {         
+      margin: 8px 0 20px 20%; 
+      padding: 5px 0;
+      text-align: right;
+    }       
+  }
+  
+  &__title {
+    max-width: 100%;
+    margin: 5px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2.8rem;  
+    font-weight: 900;
+    word-wrap: break-word;   
+    letter-spacing: 0px;
+    line-height: 1.1;
+    color: #ffffff;
+    @media screen and (min-width: 768px) {         
+      text-align: right;
+    }   
+    @media screen and (min-width: 645px) {
+      font-size: 4rem;
+    }     
+  }
+  
+  &__content {
+    background: #77aaf6; 
+  }
+   
+}
+
+.guide-links {               
+  display: flex;
+  flex-direction: row;
+  justify-content: center;     
+  align-items: center;
+  margin: 8px 0;
+  padding: 5px 0; 
+  font-size: 16px;
+  @media screen and (min-width: 768px) {         
+    justify-content: flex-end;
+  }
+      
+  &__button {
+    display: block; 
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background: #77aaf6;    
+    text-decoration: none;
+    &:hover {
+      opacity: 0.7; 
+      cursor: pointer;
+    }
+  }
+
+  &__button-text{
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;  
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    color: #ffffff;
+  }
+    
+}
+
+/********** module guide ***********/
+
+
+/***** TODO - module contacts *********************/
+.contacts {  
+  display: flex;  
+  flex-direction: column-reverse;         
+  align-items: center;      
+  max-width: 100%;                               
+  margin: 0px auto;
+  padding: 0; 
+  @media screen and (min-width: 768px) {         
+    flex-direction: row-reverse;
+  }
+  
+  &__info-images {                 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%; 
+    
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center;
+  
+    max-width: 100%;     
+    margin-bottom: 40px;
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 50px 0 50px 0;
+    }  
+  }
+  
+  &__images-box { 
+    max-width: 100%; 
+    height: auto;
+    margin: 0;
+    padding: 0 5px; 
+    border-radius: 30px;    
+    /*overflow: hidden;*/         
+    /*background: #f6f6f6;*/
+  
+    /* TODO - https://www.cssmatic.com/box-shadow - Box Shadow CSS Generator */
+    /*-webkit-box-shadow: 0px 16px 19px -10px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 16px 19px -10px rgba(204,204,204,1);
+    box-shadow: 0px 16px 19px -10px rgba(204,204,204,1); */
+  
+    -webkit-box-shadow: 0px 6px 10px 1px rgba(112,112,112,0.19);
+    -moz-box-shadow: 0px 6px 10px 1px rgba(112,112,112,0.19);
+    box-shadow: 0px 6px 10px 1px rgba(112,112,112,0.19); 
+  }
+  
+  &__image { 
+    display: block;       
+    max-width: 100%; 
+    margin: 0 auto;
+    border-radius: 50px; 
+    object-fit: cover;    
+    /*visibility: hidden; /* TODO */
+  }
+  
+  &__info {                      
+    flex-grow: 1;
+    flex-shrink: 1;     
+    flex-basis: 0%;
+    
+    max-width: 100%; 
+    margin-top: 40px; 
+    margin-bottom: 40px;    
+    padding: 0;
+    @media screen and (min-width: 768px) {               
+      margin: 50px 0 50px 0;    
+    } 
+  }
+  
+  &__title {  
+    margin: 8px 0 15px;
+    padding: 5px;
+    text-align: left;
+    font-size: 2rem;        
+    font-weight: bold;
+    color: #77aaf6;
+    @media screen and (min-width: 645px) {
+      font-size: 2.5rem;
+    }  
+  }
+    
+  &__text {    
+    max-width: 100%; 
+    margin: 8px 0;
+    padding: 5px;          
+    text-align: left;   
+    color: gray;  
+    letter-spacing: 0px;    
+    line-height: 2;
+    font-size: 1.2rem; 
+  }
+   
+}
+
+.links-box {               
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;  
+  align-items: center;
+  margin: 8px 0;
+  padding: 5px 0;
+  font-size: 16px; 
+  
+  &__icon-link {  
+    display: block; 
+    margin: 5px;           
+    padding: 0;               
+    border-radius: 50%;
+    &:hover {
+      opacity: 0.7; 
+      cursor: pointer;
+    }
+  }
+  
+  &__icon {   
+    display: block; 
+    padding: 15px;    
+    font-size: 1.5em; 
+    border-radius:  50%;                
+    color: #ffffff; 
+    background: #77aaf6;
+    @media screen and (min-width: 645px) {
+      font-size: 2.4em;
+      padding: 20px;
+    }  
+  }
+  
+  &__phone-box {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;       
+    align-items: flex-start;     
+    padding: 5px;
+  }
+  
+  &__phone-subtitle {
+   max-width: 100%;               
+   margin: 0 0 10px 0;
+   padding: 0;               
+   font-weight: 400;         
+   font-size: 1.4em; 
+   letter-spacing: 1px;
+   color: #535957;    
+   @media screen and (min-width: 645px) {
+      font-size: 1.6em;
+    }  
+  }
+  
+  &__phone-link {
+    display: block; 
+    margin: 0;             
+    padding: 0;               
+    font-size: 1.3em;      
+    font-weight: 900;    
+    letter-spacing: 1px;                       
+    color: #77aaf6;
+    &:hover {
+      opacity: 0.7; 
+      cursor: pointer;
+    }   
+    @media screen and (min-width: 645px) {
+      font-size: 1.5em;
+    }
+  }
+     
+}
+
+/********** module contacts ***********/
+
+
+
+

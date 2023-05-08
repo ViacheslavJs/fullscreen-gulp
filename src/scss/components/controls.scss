@@ -1,0 +1,113 @@
+
+.controls {
+  position: relative;
+  display: flex;  
+  flex-direction: column;  
+  justify-content: flex-end; 
+  align-items: center;
+  /*width: 40px;*/              
+  margin: 10px 10px -10px 10px;       
+  transition: 0.6s ease; 
+  align-self: flex-end;  
+  /*@media screen and (min-width: 1051px) {
+    align-self: center;
+  }*/ 
+  
+  /* TODO - Свойство CSS align-self выравнивает flex-элементы по текущей flex-линии, 
+  переопределяя значение свойства align-items. Если у какого-либо flex-элемента 
+  margin в поперечной оси выставлен в auto, то align-self игнорируется.
+  align-self - https://developer.mozilla.org/ru/docs/Web/CSS/align-self */
+  
+}
+
+.controls__dot-container {
+  margin-bottom: 30px;
+  padding: 10px 15px; 
+  align-self: center;   
+  transform: rotate(180deg);
+  @media screen and (orientation: portrait) and (max-width: 350px) {            
+    display: none;    
+  }
+  @media screen and (orientation: landscape) and (max-width: $mobile-big_end-point) {
+    display: none;
+  }   
+}
+
+/* indicators */
+.controls-dot-container__dot {
+  display: block;
+  width: 8px;
+  margin: 10px auto;
+  height: 8px;
+  background-color: #bbb;
+  border-radius: 50%; 
+  transition: background-color 0.6s ease;
+  @media only screen and (max-width: 370px) {
+    height: 6px;
+    width: 6px;
+  }
+}
+
+.controls__link {
+  width: 50px; 
+  margin-bottom: 50px; 
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 15px;
+  color: $color_base; 
+  background: rgba(169, 176, 174, 0.3);    
+  cursor: pointer;
+  user-select: none;   
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+  
+  &.next {
+    transform: rotate(90deg);  
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    @media only screen and (max-width: 370px) {
+      font-size: 11px
+    }
+  }
+
+  &.prev {
+    transform: rotate(270deg);  
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    @media only screen and (max-width: 370px) {
+      font-size: 11px
+    }
+  }
+     
+}
+
+
+.active {
+  background-color: green;
+}
+
+/*
+.slider-images-box {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.6} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.6} 
+  to {opacity: 1}
+}
+*/
+
+/***************************/
+
+
