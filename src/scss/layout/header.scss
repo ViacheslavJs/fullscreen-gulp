@@ -1,0 +1,25 @@
+
+.header {
+  position: fixed;     
+  top: 0;
+  left: 0; 
+  right: 0;   
+  height: 80.4px; 
+  z-index: 50;
+  @media screen and (max-width: $mobile-big_end-point) {
+    height: 53.6px;
+  }
+}
+
+.header--style_background {
+  background: $header_bg; 
+}
+
+.header__line {
+  height: 10px;
+  margin-top: 0px;
+  border: none;
+  background: $header-line_bg;
+}
+
+
